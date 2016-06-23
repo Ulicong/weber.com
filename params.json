@@ -1,6 +1,6 @@
 {
   "name": "李欢的个人空间",
   "tagline": "LiHuan's Personal Space",
-  "body": "### 先来个自我评价吧.\r\n首先对于工作、我热爱她愿意为她付出；其次对于沟通协调方面我想没有问题；我愿意分享、喜欢分享我对技术方面的理解和感悟；曾经多次在公司内部分享交流过数据库、多线程方面的知识；对于技术我喜欢开源、喜欢刨根问底；曾手动编译过JVM、阅读过JVM源码及其规范；对于通信、大数据、分布式、Js都有深入的学习心得；最后对于编程思想方面、思想和眼界我感觉很重要；我的座右铭是“要用CPU的思维来编程!”。\r\n",
+  "body": "### 先来个自我评价吧.\r\n首先对于工作、我热爱她愿意为她付出；其次对于沟通协调方面我想没有问题；我愿意分享、喜欢分享我对技术方面的理解和感悟；曾经多次在公司内部分享交流过数据库、多线程方面的知识；对于技术我喜欢开源、喜欢刨根问底；曾手动编译过JVM、阅读过JVM源码及其规范；对于通信、大数据、分布式、Js都有深入的学习心得；最后对于编程思想方面、思想和眼界我感觉很重要；我的座右铭是“要用CPU的思维来编程!”。\r\n\r\n### Java锁\r\n    1. synchronized同步锁是作用在对象上面对象必需统一不能变；\r\n    2. 线程同步互斥指的是多个线程执行同一段代码或执行多段代码而不被打断；\r\n    3. 注意synchronized作用于XX.class子节码时的同步互斥情况；\r\n    4. synchronized同步块可以作用于String变量上但不能作用于char、int、double等java基本类型上因为它们定义时不会生成对象；\r\n    5. Lock实现同步互斥时必需共用同一个ReentrantLock对象；注意添加finally释放锁;\r\n    6. Synchronized的语义底层是通过一个monitor的对象来完成，其实wait/notify等方法也依赖于monitor对象，这就是为什么只有在同步的块或者方法中才能调用wait/notify等方法，否则会抛出      java.lang.IllegalMonitorStateException的异常的原因。",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
