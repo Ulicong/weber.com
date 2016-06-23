@@ -1,44 +1,25 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>李欢的个人空间 by Ulicong</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/Ulicong/weber.com">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/Ulicong/weber.com/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/Ulicong/weber.com/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+    <section class="page-header">
+      <h1 class="project-name">李欢的个人空间</h1>
+      <h2 class="project-tagline">LiHuan&#39;s Personal Space</h2>
+      <a href="https://github.com/Ulicong/weber.com" class="btn">View on GitHub</a>
+      <a href="https://github.com/Ulicong/weber.com/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Ulicong/weber.com/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>李欢的个人空间</h1>
-          <p>LiHuan&#39;s Personal Space</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/Ulicong">Ulicong</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
-        <h3>
+    <section class="main-content">
+      <h3>
 <a id="先来个自我评价吧" class="anchor" href="#%E5%85%88%E6%9D%A5%E4%B8%AA%E8%87%AA%E6%88%91%E8%AF%84%E4%BB%B7%E5%90%A7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>先来个自我评价吧.</h3>
 
 <p>首先对于工作、我热爱她愿意为她付出；其次对于沟通协调方面我想没有问题；我愿意分享、喜欢分享我对技术方面的理解和感悟；曾经多次在公司内部分享交流过数据库、多线程方面的知识；对于技术我喜欢开源、喜欢刨根问底；曾手动编译过JVM、阅读过JVM源码及其规范；对于通信、大数据、分布式、Js都有深入的学习心得；最后对于编程思想方面、思想和眼界我感觉很重要；我的座右铭是“要用CPU的思维来编程!”。</p>
@@ -46,17 +27,33 @@
 <h3>
 <a id="java锁" class="anchor" href="#java%E9%94%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Java锁</h3>
 
-<pre><code>1. synchronized同步锁是作用在对象上面对象必需统一不能变；
-2. 线程同步互斥指的是多个线程执行同一段代码或执行多段代码而不被打断；
-3. 注意synchronized作用于XX.class子节码时的同步互斥情况；
-4. synchronized同步块可以作用于String变量上但不能作用于char、int、double等java基本类型上因为它们定义时不会生成对象；
-5. Lock实现同步互斥时必需共用同一个ReentrantLock对象；注意添加finally释放锁;
-6. Synchronized的语义底层是通过一个monitor的对象来完成，其实wait/notify等方法也依赖于monitor对象，这就是为什么只有在同步的块或者方法中才能调用wait/notify等方法，否则会抛出      java.lang.IllegalMonitorStateException的异常的原因。
-</code></pre>
-      </section>
+<h4>
+<a id="总结" class="anchor" href="#%E6%80%BB%E7%BB%93" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>总结</h4>
 
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+<ol>
+<li>synchronized同步锁是作用在对象上面对象必需统一不能变；</li>
+<li>线程同步互斥指的是多个线程执行同一段代码或执行多段代码而不被打断；</li>
+<li>注意synchronized作用于XX.class子节码时的同步互斥情况；</li>
+<li>synchronized同步块可以作用于String变量上但不能作用于char、int、double等java基本类型上因为它们定义时不会生成对象；</li>
+<li>Lock实现同步互斥时必需共用同一个ReentrantLock对象；注意添加finally释放锁;</li>
+<li>Synchronized的语义底层是通过一个monitor的对象来完成，其实wait/notify等方法也依赖于monitor对象，这就是为什么只有在同步的块或者方法中才能调用wait/notify等方法，否则会抛出      java.lang.IllegalMonitorStateException的异常的原因。
+####synchronized原理
+每个对象有一个监视器锁（monitor）。当monitor被占用时就会处于锁定状态，线程执行monitorenter指令时尝试获取monitor的所有权，过程如下：</li>
+<li>如果monitor的进入数为0，则该线程进入monitor，然后将进入数设置为1，该线程即为monitor的所有者。</li>
+<li>如果线程已经占有该monitor，只是重新进入，则进入monitor的进入数加1.</li>
+<li>如果其他线程已经占用了monitor，则该线程进入阻塞状态，直到monitor的进入数为0，再重新尝试获取monitor的所有权。</li>
+<li>执行monitorexit的线程必须是objectref所对应的monitor的所有者。</li>
+<li>指令执行时，monitor的进入数减1，如果减1后进入数为0，那线程退出monitor，不再是这个monitor的所有者。其他被这个monitor阻塞的线程可以尝试去获取这个 monitor 的所有权。</li>
+</ol>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Ulicong/weber.com">李欢的个人空间</a> is maintained by <a href="https://github.com/Ulicong">Ulicong</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
